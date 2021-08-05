@@ -29,8 +29,8 @@ int main(){
             }
 
         }
-        
 
+        
 
     }
     cout << "Strong" << endl;
