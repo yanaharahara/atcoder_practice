@@ -2,12 +2,10 @@
 using namespace std;
 
 int main(){
-    unsigned long long int N;
+    long long int N;
     cin >> N;
-    double result = std::log2(N);
+    
 
-    result = int(result);
-    std::cout << result
-              << std::endl;
+    cout << floor(log2((long double)N)) << endl;
 }
 
