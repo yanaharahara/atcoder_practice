@@ -9,10 +9,9 @@ int main(){
     bool step = true;
     rep(i,3){
         if(s[i] != s[i+1]) same = false;
-        int a = s[i] - '0';//整数化
+        int a = s[i] - '0';
         int b = stoi(s.substr(i+1,1));
         if((a+1)%10 != b) step = false;
-
     }
     if(same || step) cout << "Weak" << endl;
     else cout << "Strong" << endl;
