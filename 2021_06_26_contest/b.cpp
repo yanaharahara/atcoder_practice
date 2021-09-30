@@ -2,31 +2,36 @@
 using namespace std;
 
 int main(){
-    int A,B,C,D;
+    long long int A,B,C,D;
     cin >> A >> B >> C >> D;
+    /*
     if(B>C){
         cout << -1 << endl;
         return 0;
     }
+    */
 
-    int blue = A;
-    int red = 0;
-    int cnt = 0;
+    long long int blue = A;
+    long long int red = 0;
+    long long int cnt = 0;
     if(blue <= red*D){
         cout << cnt << endl;
         return 0;
     }
-    for(;;){
+    long long u = pow(10.0,5.0);
+    for(int i=1;i<=u;i++){
         blue += B;
         red += C;
         cnt += 1;
         if(blue <= red*D){
-            break;
+            cout << cnt << endl;
+            
+            return 0;
 
         }
 
     }
-    cout << cnt << endl;
+    cout << -1 << endl;
     return 0;
 
 
