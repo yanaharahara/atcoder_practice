@@ -5,18 +5,19 @@ using namespace std;
 int main(){
     long long int n,q;
     cin >> n >> q;
-    vector<long long int> a(n);
-    vector<long long int> x(q);
+    vector<int> a(n);
     rep(i,n){
         cin >> a[i];
     }
-    rep(i,q){
-        cin >> x[i];
+    sort(a.begin(),a.end());
+    rep(qi,q){
+        int x;
+        cin >> x;
+        int i = lower_bound(a.begin(),a.end(),x)-a.begin();
+        cout << i << endl;
+        int ans = n - i;
+        cout << ans << endl;
     }
-    long long int ans = 0;
-    rep(i,n){
-        if(a[i] >= x[i]) ans++;
-    }
-    cout << ans << endl;
+    
 
 }
